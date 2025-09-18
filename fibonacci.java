@@ -1,18 +1,21 @@
-// Fibonacci Series in Java
-public class fibonacci {
+
+import java.util.Scanner;
+
+public class fibonacci{
     public static void main(String[] args) {
-        int n = 10; // number of terms to print
-        int first = 0, second = 1;
+        int first=0;
+        int second=1;
+        int next;
+        Scanner sc= new Scanner(System.in);
+        System.out.println("enter a no");
+        int n=sc.nextInt();
+        System.out.println("so the fibonacci sequence for the "+n+"term are:");
+        for(int i=0;i<n;i++){
+            System.out.println(first+"");
+            first=second;
+            next=first+second;
+            second=next;
 
-        System.out.println("Fibonacci Series up to " + n + " terms:");
-
-        for (int i = 1; i <= n; i++) {
-            System.out.print(first + " ");
-
-            // update values
-            int next = first + second;
-            first = second;
-            second = next;
         }
     }
 }
